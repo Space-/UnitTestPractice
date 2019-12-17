@@ -1,0 +1,14 @@
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\UnitTestPractice.deps.json
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\UnitTestPractice.runtimeconfig.json
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\UnitTestPractice.runtimeconfig.dev.json
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\UnitTestPractice.dll
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\bin\Debug\netcoreapp2.2\UnitTestPractice.pdb
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.csprojAssemblyReference.cache
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.csproj.CoreCompileInputs.cache
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.AssemblyInfoInputs.cache
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.AssemblyInfo.cs
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.dll
+D:\Users\user\VS Workspaces\UnitTestPractice\UnitTestPractice\obj\Debug\netcoreapp2.2\UnitTestPractice.pdb
