@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "adedb69a787e6948c8cbde13b2f76f2055b88faf"
+    "signature": "623cd3ba8549c1b1c6ff14ff27df9747a239377e"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "NUnit3TestAdapter": "3.11.0",
+          "RhinoMocks": "3.6.1",
           "NUnit": "3.11.0"
         },
         "runtime": {
@@ -433,6 +434,14 @@
           "System.Threading.Thread": "4.3.0",
           "System.Xml.XPath.XmlDocument": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "RhinoMocks/3.6.1": {
+        "runtime": {
+          "lib/net/Rhino.Mocks.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
         }
       },
       "runtime.native.System/4.3.0": {},
@@ -1129,6 +1138,13 @@
       "sha512": "sha512-Ae4UL0lBn09Wvr6hsF3VmiBtKdaJlfpc+KIfjd4ukUzEipltjl9vKs7k0og+s83Di0E20dT/T5zbFw/Axkn9jA==",
       "path": "nunit3testadapter/3.11.0",
       "hashPath": "nunit3testadapter.3.11.0.nupkg.sha512"
+    },
+    "RhinoMocks/3.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0HjdR7PVVUDz9Db5cLzU0Dquay8MhoCoZ8PJRZOo10Iysq4m+mjl2aaxc4eWztvZ6S1v/NYW5xv1qul0ToN21w==",
+      "path": "rhinomocks/3.6.1",
+      "hashPath": "rhinomocks.3.6.1.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

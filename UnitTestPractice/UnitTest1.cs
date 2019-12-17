@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using Rhino.Mocks;
 
 namespace Tests
 {
@@ -11,69 +12,88 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void Test_Charge_Customer_Count()
         {
-            Assert.Pass();
-        }
-    }
+            //arrange
+            ICheckInFee stubCheckInFee = MockRepository.GenerateStub<ICheckInFee>();
+            Pub target = new Pub(stubCheckInFee);
 
-    public interface ICheckInFee
-    {
-        decimal GetFee(Customer customer);
-    }
+            stubCheckInFee.Stub(x => x.GetFee(Arg<Customer>.Is.Anything)).Return(100);
 
-    public class Customer
-    {
-        public bool IsMale { get; set; }
-
-        public int Seq { get; set; }
-    }
-
-    public class Pub
-    {
-        private ICheckInFee _checkInFee;
-        private decimal _inCome = 0;
-
-        public Pub(ICheckInFee checkInFee)
-        {
-            this._checkInFee = checkInFee;
-        }
-
-        /// <summary>
-        /// 入場
-        /// </summary>
-        /// <param name="customers"></param>
-        /// <returns>收費的人數</returns>
-        public int CheckIn(List<Customer> customers)
-        {
-            var result = 0;
-
-            foreach (var customer in customers)
+            var customers = new List<Customer>
             {
-                var isFemale = !customer.IsMale;
+                new Customer {IsMale = true},
+                new Customer {IsMale = false},
+                new Customer {IsMale = false},
+            };
 
-                //女生免費入場
-                if (isFemale)
-                {
-                    continue;
-                }
-                else
-                {
-                    //for stub, validate status: income value
-                    //for mock, validate only male
-                    this._inCome += this._checkInFee.GetFee(customer);
+            decimal expected = 1;
 
-                    result++;
-                }
+            //act
+            var actual = target.CheckIn(customers);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        public interface ICheckInFee
+        {
+            decimal GetFee(Customer customer);
+        }
+
+        public class Customer
+        {
+            public bool IsMale { get; set; }
+
+            public int Seq { get; set; }
+        }
+
+        public class Pub
+        {
+            private ICheckInFee _checkInFee;
+            private decimal _inCome = 0;
+
+            public Pub(ICheckInFee checkInFee)
+            {
+                this._checkInFee = checkInFee;
             }
 
-            //for stub, validate return value
-            return result;
-        }
+            /// <summary>
+            /// 入場
+            /// </summary>
+            /// <param name="customers"></param>
+            /// <returns>收費的人數</returns>
+            public int CheckIn(List<Customer> customers)
+            {
+                var result = 0;
 
-        public decimal GetInCome()
-        {
-            return this._inCome;
+                foreach (var customer in customers)
+                {
+                    var isFemale = !customer.IsMale;
+
+                    //女生免費入場
+                    if (isFemale)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        //for stub, validate status: income value
+                        //for mock, validate only male
+                        this._inCome += this._checkInFee.GetFee(customer);
+
+                        result++;
+                    }
+                }
+
+                //for stub, validate return value
+                return result;
+            }
+
+            public decimal GetInCome()
+            {
+                return this._inCome;
+            }
         }
     }
 }

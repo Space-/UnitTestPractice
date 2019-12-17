@@ -666,6 +666,15 @@
           "build/netcoreapp1.0/NUnit3TestAdapter.props": {}
         }
       },
+      "RhinoMocks/3.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net/Rhino.Mocks.dll": {}
+        },
+        "runtime": {
+          "lib/net/Rhino.Mocks.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2633,6 +2642,19 @@
         "build/netcoreapp1.0/nunit.engine.netstandard.dll",
         "nunit3testadapter.3.11.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
+      ]
+    },
+    "RhinoMocks/3.6.1": {
+      "sha512": "0HjdR7PVVUDz9Db5cLzU0Dquay8MhoCoZ8PJRZOo10Iysq4m+mjl2aaxc4eWztvZ6S1v/NYW5xv1qul0ToN21w==",
+      "type": "package",
+      "path": "rhinomocks/3.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/Rhino.Mocks.dll",
+        "lib/net/Rhino.Mocks.xml",
+        "rhinomocks.3.6.1.nupkg.sha512",
+        "rhinomocks.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -5745,6 +5767,7 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
+      "RhinoMocks >= 3.6.1",
       "nunit >= 3.11.0"
     ]
   },
@@ -5803,6 +5826,10 @@
             "target": "Package",
             "version": "[3.11.0, )"
           },
+          "RhinoMocks": {
+            "target": "Package",
+            "version": "[3.6.1, )"
+          },
           "nunit": {
             "target": "Package",
             "version": "[3.11.0, )"
@@ -5815,5 +5842,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用 '.NETFramework,Version=v4.6.1' 而非專案目標架構 '.NETCoreApp,Version=v2.2' 還原了套件 'RhinoMocks 3.6.1'。此套件與您的專案並非完全相容。",
+      "libraryId": "RhinoMocks",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }
